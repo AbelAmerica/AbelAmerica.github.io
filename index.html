@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download Files</title>
     <style>
-        /* 设置页面布局为flex，并在水平和垂直方向居中 */
+        /* 设置页面布局为flex，水平和垂直方向都居中 */
         body {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* 让内容占满整个视窗 */
+            justify-content: center;  /* 水平方向居中 */
+            align-items: center;      /* 垂直方向居中 */
+            height: 100vh;            /* 全屏高度 */
             margin: 0;
             font-family: Arial, sans-serif;
         }
 
-        /* 垂直排列按钮的容器 */
+        /* 按钮容器，垂直排列按钮 */
         .button-container {
             display: flex;
-            flex-direction: column;
+            flex-direction: column;  /* 按Y轴排列 */
             align-items: center;
+            gap: 20px; /* 使用 flex 的 gap 属性来设置按钮之间的间距 */
         }
 
         /* 按钮样式 */
         .download-button {
             padding: 10px 20px;
-            margin: 40px 0; /* 上下20px的间距 */
             background-color: #4CAF50;
             color: white;
             border: none;
