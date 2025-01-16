@@ -3,98 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Files</title>
-
-
-
+    <title>这是一个iOS超级签</title>
     <style>
-        /* 设置页面布局为flex，水平和垂直方向都居中 */
-        body {
-            display: flex;
-            justify-content: center;  /* 水平方向居中 */
-            align-items: center;      /* 垂直方向居中 */
-            height: 100vh;            /* 全屏高度 */
+        /* 设置页面样式 */
+        html, body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* 禁止页面滚动 */
         }
 
-        /* 按钮容器，垂直排列按钮 */
-        .button-container {
-            display: flex;
-            flex-direction: column;  /* 按Y轴排列 */
-            align-items: center;
-            gap: 20px; /* 使用 flex 的 gap 属性来设置按钮之间的间距 */
+        /* 列表容器占满屏幕 */
+        .scrollable-list {
+            width: 100vw; /* 屏幕宽度 */
+            height: 100vh; /* 屏幕高度 */
+            overflow-y: scroll; /* 启用垂直滚动 */
+            overflow-x: hidden; /* 禁止水平滚动 */
+            background-color: #f9f9f9;
         }
 
-        /* 按钮样式 */
-        .download-button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 150px; /* 按钮宽度 */
-            text-align: center;
+        /* 列表项样式 */
+        .list-item {
+            padding: 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 18px;
         }
 
-        .download-button:hover {
-            background-color: #45a049;
+        /* 列表项 hover 效果 */
+        .list-item:hover {
+            background-color: #eaeaea;
         }
     </style>
 </head>
 <body>
-    <div class="button-container">
-
     <h1>这是一个iOS超级签</h1>
-
-    <span> </span>
-
-    <!-- 第一个下载按钮 -->
-    <button class="Download File 1" onclick="window.location.href='itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/AbelAmerica/iospack/refs/heads/main/manifest.plist'">
-        测试请点此处
-    </button>
-
-    <!-- 第二个下载按钮 -->
-    <button class="Download File 2" onclick="window.location.href='itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/AbelAmerica/iospack/refs/heads/main/pre.plist'">
-        预发请点此处
-    </button>
-
-    <!-- 第三个下载按钮 -->
-    <button class="Download File 3 " onclick="window.location.href='itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/AbelAmerica/iospack/refs/heads/main/main.plist'">
-        正式请点此处
-    </button>
-
-        <!-- 第三个下载按钮 -->
-        <button class="Download File 4 " onclick="window.location.href='itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/AbelAmerica/iospack/refs/heads/main/mask.plist'">
-            mark本地
-        </button>
-
-        <p>先开启开发者模式：设置->隐私与安全性->开发者模式->点击开启->点击重启</p>
-        <span>已添加的设备列表：</span>
-        <span> "andy" => "00008030-0001690614BB802E",</span>
-        <pspan> "iOS2" => "9f4b3cfb0ad15cf3adea43102a85ca0924999544",</pspan>
-        <span> "iOS3" => "3187c5216f415ad0e102f6fc3365081b025360b2",</span>
-        <span> "iOS4" => "00008110-000C44C101E8401E",</span>
-        <span> "iOS5" => "00008110-001819663E03801E",</span>
-        <span> "iOS6" => "00008101-001D29441420001E",</span>
-        <span> "mk7p" => "d021b3e4bb87c76f57dfefdf3999f23fe6d17b25",</span>
-        <span>  "mk12" => "00008101-001339E80CB9003A",</span>
-        <span> "mk6s" => "eb9b637fbec37552acf542946a02c0057da69f3b",</span>
-        <span> "Logan" => "00008030-001C71221402802E",</span>
-        <span> "chuck" => "00008120-000E799611A3C01E",</span>
-        <span> "moss-WEN-D-U" => "00008110-0011043634A2801E",</span>
-        <span>"andy33" => "00008101-000521240C52001E",</span>
-        <span> "andy34" => "60717ec5307a361761244ad213b1f498a80cfec2",</span>
-        <span> "Soloing" => "be45610c781c51a01845c00b3a764faaead45878",</span>
-        <span> "hulu" => "00008110-0011452E1432401E",</span>
-        <span> "Logan2" => "72a9a0e5edcac5436fd38baec1f0fb22167510ce",</span>
-        <span> "Logan3" => "00008120-00146DC6146BC01E",</span>
-        <span> "Jackie-T" => "00008030-001934CA1AD2802E",</span>
-        <span> "Bob-p" => "6e8ef7d9b5f6c5fb48ee3458e8ad19bbe6090eab",</span>
-        <span>"moss-WEN-D-U2" => "00008140-0011485036C2801C",</span>
-
-</div>
-
+    <div class="scrollable-list">
+        <ul>
+            <li></li>
+            <li><button class="Download File 1" onclick="window.location.href='itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/AbelAmerica/iospack/refs/heads/main/manifest.plist'">
+                测试请点此处
+            </button></li>
+            <li></li>
+            <li><button class="Download File 2" onclick="window.location.href='itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/AbelAmerica/iospack/refs/heads/main/pre.plist'">
+                预发请点此处
+            </button></li>
+            <li></li>
+            <li><button class="Download File 3 " onclick="window.location.href='itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/AbelAmerica/iospack/refs/heads/main/main.plist'">
+                正式请点此处
+            </button></li>
+            <li><p>先开启开发者模式：设置->隐私与安全性->开发者模式->点击开启->点击重启</p></li>
+            <li><p>已添加的设备列表：</p></li>
+                <p> "andy" => "00008030-0001690614BB802E",</p>
+                <p> "iOS2" => "9f4b3cfb0ad15cf3adea43102a85ca0924999544",</p>
+                <p> "iOS3" => "3187c5216f415ad0e102f6fc3365081b025360b2",</p>
+                <p> "iOS4" => "00008110-000C44C101E8401E",</p>
+                <p> "iOS5" => "00008110-001819663E03801E",</p>
+                <p> "iOS6" => "00008101-001D29441420001E",</p>
+                <p> "mk7p" => "d021b3e4bb87c76f57dfefdf3999f23fe6d17b25",</p>
+                <p>  "mk12" => "00008101-001339E80CB9003A",</p>
+                <p> "mk6s" => "eb9b637fbec37552acf542946a02c0057da69f3b",</p>
+                <p> "Logan" => "00008030-001C71221402802E",</p>
+                <p> "chuck" => "00008120-000E799611A3C01E",</p>
+                <p> "moss-WEN-D-U" => "00008110-0011043634A2801E",</p>
+                <p>"andy33" => "00008101-000521240C52001E",</p>
+                <p> "andy34" => "60717ec5307a361761244ad213b1f498a80cfec2",</p>
+                <p> "Soloing" => "be45610c781c51a01845c00b3a764faaead45878",</p>
+                <p> "hulu" => "00008110-0011452E1432401E",</p>
+                <p> "Logan2" => "72a9a0e5edcac5436fd38baec1f0fb22167510ce",</p>
+                <p> "Logan3" => "00008120-00146DC6146BC01E",</p>
+                <p> "Jackie-T" => "00008030-001934CA1AD2802E",</p>
+                <p> "Bob-p" => "6e8ef7d9b5f6c5fb48ee3458e8ad19bbe6090eab",</p>
+                <p>"moss-WEN-D-U2" => "00008140-0011485036C2801C",</p>
+        </ul>
+    </div>
 </body>
 </html>
